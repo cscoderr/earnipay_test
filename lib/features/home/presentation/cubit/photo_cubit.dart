@@ -12,8 +12,13 @@ class PhotoCubit extends Cubit<PhotoState> {
   final GetPhotoUsecase _getPhotoUsecase;
 
   Future<void> getPhotos() async {
-    try {
-      await _getPhotoUsecase.call();
-    } catch (e) {}
+    // try {
+    emit(const PhotoLoading());
+    final response = await _getPhotoUsecase.call();
+    emit(PhotoSuccess(response));
+    // } catch (e) {
+    //   print(e);
+    //   emit(const PhotoFailure('Something went wrong'));
+    // }
   }
 }

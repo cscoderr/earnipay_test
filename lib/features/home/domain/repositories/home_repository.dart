@@ -1,3 +1,5 @@
+import 'package:earnipay_test/features/home/home.dart';
+
 abstract class HomeRepository {
-  Future<void> getPhotos();
+  Future<List<Photo>> getPhotos();
 }

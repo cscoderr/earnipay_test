@@ -1,8 +1,8 @@
-import 'package:earnipay_test/features/home/data/datasources/remote/home_remote_data_source.dart';
+import 'package:earnipay_test/features/home/home.dart';
 
 class HomeLocalDataSourceImpl extends HomeRemoteDataSource {
   @override
-  Future<void> getPhotos() {
+  Future<List<Photo>> getPhotos() {
     // TODO: implement getPhotos
     throw UnimplementedError();
   }

@@ -5,7 +5,7 @@ final class GetPhotoUsecase {
 
   final HomeRepository repository;
 
-  Future<void> call() {
+  Future<List<Photo>> call() {
     return repository.getPhotos();
   }
 }

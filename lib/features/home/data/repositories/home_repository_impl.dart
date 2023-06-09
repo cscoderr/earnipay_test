@@ -5,7 +5,7 @@ final class HomeRepositoryImpl extends HomeRepository {
       : _remoteDataSource = remoteDataSource;
   final HomeRemoteDataSource _remoteDataSource;
   @override
-  Future<void> getPhotos() async {
-    await _remoteDataSource.getPhotos();
+  Future<List<Photo>> getPhotos() async {
+    return await _remoteDataSource.getPhotos();
   }
 }
