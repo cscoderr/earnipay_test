@@ -60,10 +60,9 @@ class HomePhotoGridView extends StatelessWidget {
                 right: 0,
                 child: Row(
                   children: [
-                    CircleAvatar(
+                    AppRoundedImage(
                       radius: 15,
-                      backgroundImage: CachedNetworkImageProvider(
-                          photo.user?.profileImage?.medium ?? ''),
+                      url: photo.user?.profileImage?.medium ?? '',
                     ),
                     const SizedBox(width: 10),
                     Expanded(
