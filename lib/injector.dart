@@ -1,4 +1,5 @@
-import 'package:earnipay_test/features/home/home.dart';
+import 'package:earnipay_test/data/data.dart';
+import 'package:earnipay_test/domain/domain.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
 

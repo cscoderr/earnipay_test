@@ -1,8 +1,9 @@
 import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:earnipay_test/features/home/home.dart';
+import 'package:earnipay_test/presentation/presentation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 class EarnipayApp extends StatelessWidget {
@@ -13,6 +14,11 @@ class EarnipayApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: GoogleFonts.poppins().fontFamily,
+        textTheme: GoogleFonts.poppinsTextTheme(),
+      ),
       builder: (context, child) => AppBuilder(
         child: child,
       ),
