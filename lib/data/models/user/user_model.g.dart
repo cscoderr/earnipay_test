@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user.dart';
+part of 'user_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-User _$UserFromJson(Map<String, dynamic> json) => User(
+UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       id: json['id'] as String?,
       username: json['username'] as String?,
       name: json['name'] as String?,
@@ -18,13 +18,13 @@ User _$UserFromJson(Map<String, dynamic> json) => User(
       totalCollections: json['total_collections'] as int?,
       instagramUsername: json['instagram_username'] as String?,
       twitterUsername: json['twitter_username'] as String?,
-      profileImage: json['profile_image'] == null
+      profileImageM: json['profile_image'] == null
           ? null
-          : ProfileImage.fromJson(
+          : ProfileImageModel.fromJson(
               json['profile_image'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
+Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'id': instance.id,
       'username': instance.username,
       'name': instance.name,
@@ -36,5 +36,5 @@ Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
       'total_collections': instance.totalCollections,
       'instagram_username': instance.instagramUsername,
       'twitter_username': instance.twitterUsername,
-      'profile_image': instance.profileImage,
+      'profile_image': instance.profileImageM,
     };

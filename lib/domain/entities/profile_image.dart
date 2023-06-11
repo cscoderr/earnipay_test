@@ -1,19 +1,20 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:equatable/equatable.dart';
 
-part 'profile_image.g.dart';
-
-@JsonSerializable(fieldRename: FieldRename.snake)
-class ProfileImage {
-  ProfileImage({
+class ProfileImage with EquatableMixin {
+  const ProfileImage({
     this.small,
     this.medium,
     this.large,
   });
 
-  factory ProfileImage.fromJson(Map<String, dynamic> json) =>
-      _$ProfileImageFromJson(json);
-
   final String? small;
   final String? medium;
   final String? large;
+
+  @override
+  List<Object?> get props => [
+        small,
+        medium,
+        large,
+      ];
 }

@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:earnipay_test/domain/domain.dart';
+import 'package:earnipay_test/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class DetailPhotoWidget extends StatelessWidget {
@@ -39,6 +40,8 @@ class DetailPhotoWidget extends StatelessWidget {
         placeholder: (context, url) => const Center(
           child: CircularProgressIndicator(),
         ),
+        errorWidget: (context, _, __) =>
+            Assets.images.placeholder.image(fit: BoxFit.cover),
       ),
     );
   }

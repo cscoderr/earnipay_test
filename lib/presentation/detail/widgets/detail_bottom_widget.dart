@@ -19,7 +19,7 @@ class DetailBottomWidget extends StatelessWidget {
       child: Row(
         children: [
           AppRoundedImage(
-            url: photo.user?.profileImage?.large ?? '',
+            url: photo.user?.profileImage?.medium ?? '',
           ),
           const SizedBox(width: 10),
           Expanded(

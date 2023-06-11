@@ -1,5 +1,10 @@
-class Urls {
-  const Urls({
+import 'package:isar/isar.dart';
+
+part 'isar_urls.g.dart';
+
+@embedded
+class IsarUrls {
+  const IsarUrls({
     this.raw,
     this.full,
     this.regular,

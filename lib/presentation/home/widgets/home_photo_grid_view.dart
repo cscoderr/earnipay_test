@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:earnipay_test/core/core.dart';
 import 'package:earnipay_test/domain/domain.dart';
 import 'package:earnipay_test/presentation/presentation.dart';
@@ -18,6 +17,7 @@ class HomePhotoGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = context.watch<PhotoCubit>().state;
     return GridView.custom(
+      padding: EdgeInsets.zero,
       gridDelegate: SliverStairedGridDelegate(
         // crossAxisCount: 2,
         crossAxisSpacing: 5,

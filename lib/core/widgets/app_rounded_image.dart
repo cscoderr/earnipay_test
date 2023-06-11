@@ -11,7 +11,11 @@ class AppRoundedImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       radius: radius,
-      backgroundImage: CachedNetworkImageProvider(url),
+      backgroundColor: Colors.white,
+      backgroundImage: CachedNetworkImageProvider(
+        url,
+        errorListener: () => print('Error loading image'),
+      ),
     );
   }
 }

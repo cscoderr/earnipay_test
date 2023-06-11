@@ -1,7 +1,8 @@
 import 'dart:convert';
 
 import 'package:earnipay_test/core/core.dart';
-import 'package:earnipay_test/domain/domain.dart';
+import 'package:earnipay_test/core/exceptions/exceptions.dart';
+import 'package:earnipay_test/data/data.dart';
 import 'package:http/http.dart' as http;
 
 abstract class HomeRemoteDataSource {
@@ -9,7 +10,7 @@ abstract class HomeRemoteDataSource {
   /// the user had an internet connection.
   ///
   /// Throws [CacheException] if no cached data is present.
-  Future<List<Photo>> getPhotos({int? limit, int? page});
+  Future<List<PhotoModel>> getPhotos({int? limit, int? page});
 }
 
 final class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
@@ -18,32 +19,31 @@ final class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   final http.Client _httpClient;
 
   @override
-  Future<List<Photo>> getPhotos({int? limit, int? page}) async {
-    // try {
-    final response = await _httpClient.get(
-        Uri.parse('${AppConstants.baseUrl}/photos').replace(
-          queryParameters: {
-            if (page != null) 'page': page.toString(),
-            if (limit != null) 'per_page': limit.toString(),
-            // 'order_by': 'latest',
-          },
-        ),
-        headers: {
-          'Authorization':
-              'Client-ID -pkDZ4uMJ3f2I9FPoqcgXgxY8Y9w7ltpRM3znuiBebY'
-        });
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body) as List;
-      final photos =
-          data.map((e) => Photo.fromJson(e as Map<String, dynamic>)).toList();
-      return photos;
-      // return response.body;
-    } else {
-      throw Exception();
-      // throw ServerException();
+  Future<List<PhotoModel>> getPhotos({int? limit, int? page}) async {
+    try {
+      final response = await _httpClient.get(
+          Uri.parse('${AppConstants.baseUrl}/photos').replace(
+            queryParameters: {
+              if (page != null) 'page': page.toString(),
+              if (limit != null) 'per_page': limit.toString(),
+              // 'order_by': 'latest',
+            },
+          ),
+          headers: {
+            'Authorization':
+                'Client-ID -pkDZ4uMJ3f2I9FPoqcgXgxY8Y9w7ltpRM3znuiBebY'
+          });
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body) as List;
+        final photos = data
+            .map((e) => PhotoModel.fromJson(e as Map<String, dynamic>))
+            .toList();
+        return photos;
+      } else {
+        throw const AppException('Something went wrong');
+      }
+    } catch (e) {
+      throw AppException(e.toString());
     }
-    // } catch (e) {
-    //   throw Exception();
-    // }
   }
 }

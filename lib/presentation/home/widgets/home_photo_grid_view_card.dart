@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:earnipay_test/domain/domain.dart';
+import 'package:earnipay_test/gen/assets.gen.dart';
 import 'package:earnipay_test/presentation/presentation.dart';
 import 'package:flutter/material.dart';
 
@@ -49,6 +50,8 @@ class HomePhotoGridViewCard extends StatelessWidget {
               imageUrl: photo.urls?.regular ?? 'https://picsum.photos/200/300',
               fit: BoxFit.cover,
               placeholder: (context, url) => const HomeChildLoaderShimmer(),
+              errorWidget: (context, _, __) =>
+                  Assets.images.placeholder.image(fit: BoxFit.cover),
             ),
           ),
         ),

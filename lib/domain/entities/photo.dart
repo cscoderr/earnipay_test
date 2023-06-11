@@ -1,9 +1,5 @@
 import 'package:earnipay_test/domain/domain.dart';
-import 'package:json_annotation/json_annotation.dart';
 
-part 'photo.g.dart';
-
-@JsonSerializable(fieldRename: FieldRename.snake)
 class Photo {
   const Photo({
     this.id,
@@ -16,8 +12,6 @@ class Photo {
     this.user,
     this.urls,
   });
-
-  factory Photo.fromJson(Map<String, dynamic> json) => _$PhotoFromJson(json);
 
   final String? id;
   final String? createdAt;

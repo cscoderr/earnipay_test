@@ -1,3 +1,4 @@
+import 'package:earnipay_test/data/data.dart';
 import 'package:earnipay_test/domain/domain.dart';
 
 abstract class HomeLocalDataSource {
@@ -6,7 +7,7 @@ abstract class HomeLocalDataSource {
 
 class HomeLocalDataSourceImpl extends HomeLocalDataSource {
   @override
-  Future<List<Photo>> getPhotos({int? limit, int? page}) {
+  Future<List<PhotoModel>> getPhotos({int? limit, int? page}) {
     // TODO: implement getPhotos
     throw UnimplementedError();
   }

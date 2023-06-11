@@ -1,4 +1,3 @@
-import 'package:earnipay_test/core/core.dart';
 import 'package:earnipay_test/domain/domain.dart';
 
 final class GetPhotoUsecase {
@@ -8,7 +7,7 @@ final class GetPhotoUsecase {
 
   Future<List<Photo>> call({int? limit, int? page}) {
     return repository.getPhotos(
-      limit: limit ?? AppConstants.photosLimit,
+      limit: limit,
       page: page,
     );
   }

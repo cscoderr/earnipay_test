@@ -1,1 +1,1 @@
-export 'app_icon_image.dart';
+export 'app_rounded_image.dart';

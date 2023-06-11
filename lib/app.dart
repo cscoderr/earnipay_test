@@ -19,9 +19,6 @@ class EarnipayApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      builder: (context, child) => AppBuilder(
-        child: child,
-      ),
     );
   }
 }

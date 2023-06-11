@@ -1,9 +1,11 @@
-import 'package:earnipay_test/domain/domain.dart';
-import 'package:equatable/equatable.dart';
+import 'package:earnipay_test/data/data.dart';
+import 'package:isar/isar.dart';
 
-class User with EquatableMixin {
-  const User({
-    this.id,
+part 'isar_user.g.dart';
+
+@embedded
+class IsarUser {
+  const IsarUser({
     this.username,
     this.name,
     this.portfolioUrl,
@@ -17,7 +19,6 @@ class User with EquatableMixin {
     this.profileImage,
   });
 
-  final String? id;
   final String? username;
   final String? name;
   final String? portfolioUrl;
@@ -28,21 +29,5 @@ class User with EquatableMixin {
   final int? totalCollections;
   final String? instagramUsername;
   final String? twitterUsername;
-  final ProfileImage? profileImage;
-
-  @override
-  List<Object?> get props => [
-        id,
-        username,
-        name,
-        portfolioUrl,
-        bio,
-        location,
-        totalLikes,
-        totalPhotos,
-        totalCollections,
-        instagramUsername,
-        twitterUsername,
-        profileImage,
-      ];
+  final IsarProfileImage? profileImage;
 }
