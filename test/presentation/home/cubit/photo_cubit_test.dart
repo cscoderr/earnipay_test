@@ -21,7 +21,7 @@ void main() {
     });
 
     blocTest<PhotoCubit, PhotoState>(
-      'calls getPhotos with correct page',
+      'verifies getPhotos calls correct page',
       build: () => photoCubit,
       act: (cubit) => cubit.getPhotos(page: 1),
       verify: (_) {

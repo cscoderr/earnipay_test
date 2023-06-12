@@ -19,6 +19,7 @@ A Flutter Photo Application using Flutter Bloc, IsarDB and https://unsplash.com/
 
 - **Architecture:** [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
 - **Networking:** [Http](https://pub.dev/packages/http)
+- **Grids Layouts** [Flutter Staggered Grid view](https://pub.dev/packages/flutter_staggered_grid_view)
 - **Caching:** [Isar Database](https://isar.dev/tutorials/quickstart.html)
 - **State Management:** [Flutter Bloc](https://bloclibrary.dev/#/gettingstarted)
 - **Service Locator:** [GetIt](https://pub.dev/packages/get_it)
