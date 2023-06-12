@@ -52,7 +52,7 @@ final class HomeRepositoryImpl extends HomeRepository {
                     property: r'photoId', caseSensitive: true)
               ]);
           _offset += (limit ?? AppConstants.photosLimit);
-          if (response.isNotEmpty || response.length == newLimit) {
+          if (response.isNotEmpty && response.length == newLimit) {
             _offset += (limit ?? AppConstants.photosLimit);
             return response;
           }
@@ -64,9 +64,8 @@ final class HomeRepositoryImpl extends HomeRepository {
       print("new api call!!!!!!!");
       final response = _getPhotos(limit: newLimit, page: page);
       return response;
-    } catch (e, st) {
-      print(st);
-      rethrow;
+    } catch (e) {
+      throw AppException(e.toString());
     }
   }
 
@@ -80,8 +79,8 @@ final class HomeRepositoryImpl extends HomeRepository {
         mapper: (e) => e.toIsarPhoto(),
       );
       return response;
-    } catch (e) {
-      rethrow;
+    } on AppHttpException catch (e) {
+      throw AppException(e.message);
     }
   }
 }

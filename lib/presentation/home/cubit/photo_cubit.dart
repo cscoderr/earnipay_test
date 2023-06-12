@@ -24,10 +24,13 @@ class PhotoCubit extends Cubit<PhotoState> {
           hasReachedMax: hasReachedMax,
         ),
       );
-    } catch (e) {
-      print(e);
-      emit(state.copyWith(
-          status: PhotoStatus.failure, errorMessage: 'Something went wrong'));
+    } on AppException catch (e) {
+      emit(
+        state.copyWith(
+          status: PhotoStatus.failure,
+          errorMessage: e.message,
+        ),
+      );
     }
   }
 }
