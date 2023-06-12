@@ -23,6 +23,7 @@ class IsarCacheService extends CacheService {
   }) async {
     final cachedResponse = await _isar.collection<E>().buildQuery(
       whereClauses: [],
+      filter: const FilterGroup.and([]),
       distinctBy: distinct ?? [],
       offset: offset,
       limit: limit,
