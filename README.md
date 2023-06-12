@@ -9,12 +9,11 @@ A Flutter Photo Application using Flutter Bloc, IsarDB and https://unsplash.com/
 
 ## Features
 
-- It involves 5 hours forecast
-- Next 5 days forecast
-- Display of current forecast
-- Get unique tags of each product
-- Get products with their unique tags
-- Get product with product id
+- Pagination
+- Caching using IsarDB
+- Display photos when device is offline
+- Reduce api calls with 5minutes interval
+- Hero Animation
 
 ## Getting Started 🚀
 
