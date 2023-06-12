@@ -65,7 +65,7 @@ class HomeLocalDataSourceImpl extends HomeLocalDataSource {
         return response;
       }
     }
-    await _cacheService.clear<IsarPhoto>();
+    // await _cacheService.clear<IsarPhoto>();
     _hasTimeout = true;
     return null;
   }
