@@ -51,12 +51,15 @@ To run all tests use the following command:
 $ flutter test
 ```
 
+## Stack
+
+- **Architecture:** [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+- **Networking:** [Http](https://pub.dev/packages/http)
+- **Dependency Injection:** [GetIt](https://pub.dev/packages/get_it)
+- **Design Pattern:** [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)
+
 ## 🤓 Developer
 
 [<img src="https://avatars.githubusercontent.com/u/51103897?s=400&u=7284a9cfd601ac29d100fb8c88215ca454eb334c&v=4" width="150" />](https://cscoder.tech)
 
 ### Tomiwa Idowu
-
-```
-
-```
