@@ -12,7 +12,7 @@ class PhotoCubit extends Cubit<PhotoState> {
 
   final GetPhotoUsecase _getPhotoUsecase;
 
-  Future<void> getPhotos({int? page, bool isLoadMore = false}) async {
+  Future<void> getPhotos({int? page}) async {
     try {
       final response = await _getPhotoUsecase.call(page: page);
       final hasReachedMax = response.length < AppConstants.photosLimit;

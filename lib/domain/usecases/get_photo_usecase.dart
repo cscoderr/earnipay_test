@@ -1,6 +1,6 @@
 import 'package:earnipay_test/domain/domain.dart';
 
-final class GetPhotoUsecase {
+class GetPhotoUsecase {
   GetPhotoUsecase(this.repository);
 
   final HomeRepository repository;
