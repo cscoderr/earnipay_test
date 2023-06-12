@@ -1,5 +1,7 @@
 # Earnipay Test
 
+A Flutter Photo Application using Flutter Bloc, IsarDB and https://unsplash.com/ Api.
+
 ## Screenshots
 
 <h4 align="center">
