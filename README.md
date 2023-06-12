@@ -2,6 +2,11 @@
 
 A Flutter Photo Application using Flutter Bloc, IsarDB and https://unsplash.com/ Api.
 
+<h4 align="center">
+<img src="images/img1.png" width="30%" vspace="10" hspace="10"/>
+<img src="images/img2.png" width="30%" vspace="10" hspace="10"/>
+<img src="images/img3.png" width="30%" vspace="10" hspace="10"/>
+
 ## Getting Started
 
 1. Clone the project
@@ -36,13 +41,6 @@ flutter run
 - Get unique tags of each product
 - Get products with their unique tags
 - Get product with product id
-
-## Screenshots
-
-<h4 align="center">
-<img src="images/img1.png" width="30%" vspace="10" hspace="10"/>
-<img src="images/img2.png" width="30%" vspace="10" hspace="10"/>
-<img src="images/img3.png" width="30%" vspace="10" hspace="10"/>
 
 ## 🤓 Developer
 
