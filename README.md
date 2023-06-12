@@ -2,6 +2,32 @@
 
 A Flutter Photo Application using Flutter Bloc, IsarDB and https://unsplash.com/ Api.
 
+## Getting Started
+
+1. Clone the project
+
+```sh
+git clone https://github.com/cscoderr/earnipay_test.git
+```
+
+2. Navigate to the project directory
+
+```sh
+cd earnipay_test
+```
+
+3. Install dependencies
+
+```sh
+flutter pub get
+```
+
+4. Run the applicaton on any connected devices
+
+```sh
+flutter run
+```
+
 ## Features
 
 - It involves 5 hours forecast
@@ -17,32 +43,6 @@ A Flutter Photo Application using Flutter Bloc, IsarDB and https://unsplash.com/
 <img src="images/img1.png" width="30%" vspace="10" hspace="10"/>
 <img src="images/img2.png" width="30%" vspace="10" hspace="10"/>
 <img src="images/img3.png" width="30%" vspace="10" hspace="10"/>
-
-## Getting Started
-
-1. Clone the project
-
-```sh
-git clone https://github.com/cscoderr/earnipay_test.git
-```
-
-2. Navigate to the project director
-
-```sh
-cd earnipay_tes
-```
-
-3. Install dependencies
-
-```sh
-flutter pub get
-```
-
-4. Run the applicaton on any connected devices
-
-```sh
-flutter run
-```
 
 ## 🤓 Developer
 
