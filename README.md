@@ -7,7 +7,7 @@ A Flutter Photo Application using Flutter Bloc, IsarDB and https://unsplash.com/
 <img src="images/img2.png" width="30%" vspace="10" hspace="10"/>
 <img src="images/img3.png" width="30%" vspace="10" hspace="10"/>
 
-## Getting Started
+## Getting Started 🚀
 
 1. Clone the project
 
@@ -24,13 +24,23 @@ cd earnipay_test
 3. Install dependencies
 
 ```sh
-flutter pub get
+$ flutter pub get
 ```
 
 4. Run the applicaton on any connected devices
 
 ```sh
-flutter run
+$ flutter run
+```
+
+---
+
+## Running Tests 🧪
+
+To run all tests use the following command:
+
+```sh
+$ flutter test
 ```
 
 ## Features
