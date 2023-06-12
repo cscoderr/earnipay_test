@@ -15,6 +15,13 @@ A Flutter Photo Application using Flutter Bloc, IsarDB and https://unsplash.com/
 - Reduce api calls with 5minutes interval
 - Hero Animation
 
+## Stack
+
+- **Architecture:** [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+- **Networking:** [Http](https://pub.dev/packages/http)
+- **Service Locator:** [GetIt](https://pub.dev/packages/get_it)
+- **Design Pattern:** [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)
+
 ## Getting Started 🚀
 
 1. Clone the project
@@ -50,13 +57,6 @@ To run all tests use the following command:
 ```sh
 $ flutter test
 ```
-
-## Stack
-
-- **Architecture:** [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
-- **Networking:** [Http](https://pub.dev/packages/http)
-- **Dependency Injection:** [GetIt](https://pub.dev/packages/get_it)
-- **Design Pattern:** [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)
 
 ## 🤓 Developer
 
