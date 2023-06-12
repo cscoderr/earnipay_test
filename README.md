@@ -7,6 +7,15 @@ A Flutter Photo Application using Flutter Bloc, IsarDB and https://unsplash.com/
 <img src="images/img2.png" width="30%" vspace="10" hspace="10"/>
 <img src="images/img3.png" width="30%" vspace="10" hspace="10"/>
 
+## Features
+
+- It involves 5 hours forecast
+- Next 5 days forecast
+- Display of current forecast
+- Get unique tags of each product
+- Get products with their unique tags
+- Get product with product id
+
 ## Getting Started 🚀
 
 1. Clone the project
@@ -42,15 +51,6 @@ To run all tests use the following command:
 ```sh
 $ flutter test
 ```
-
-## Features
-
-- It involves 5 hours forecast
-- Next 5 days forecast
-- Display of current forecast
-- Get unique tags of each product
-- Get products with their unique tags
-- Get product with product id
 
 ## 🤓 Developer
 
