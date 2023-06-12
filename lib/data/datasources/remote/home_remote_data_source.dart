@@ -24,7 +24,6 @@ final class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
           queryParameters: {
             if (page != null) 'page': page.toString(),
             if (limit != null) 'per_page': limit.toString(),
-            // 'order_by': 'latest',
           },
         ),
         headers: {

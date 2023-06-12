@@ -43,18 +43,23 @@ class HomeView extends StatelessWidget {
                     ),
               ),
               Expanded(
-                child: BlocBuilder<PhotoCubit, PhotoState>(
-                  builder: (context, state) {
-                    if (state.status == PhotoStatus.success) {
-                      if (state.photos.isEmpty) {
-                        return const Center(child: Text('No data available'));
+                child: RefreshIndicator(
+                  onRefresh: () =>
+                      context.read<PhotoCubit>().getPhotos(page: 1),
+                  child: BlocBuilder<PhotoCubit, PhotoState>(
+                    builder: (context, state) {
+                      if (state.status == PhotoStatus.success) {
+                        if (state.photos.isEmpty) {
+                          return const Center(child: Text('No data available'));
+                        }
+                        return HomePhotoGridView(photos: state.photos);
+                      } else if (state.status == PhotoStatus.failure) {
+                        return const Center(
+                            child: Text('Something went wrong'));
                       }
-                      return HomePhotoGridView(photos: state.photos);
-                    } else if (state.status == PhotoStatus.failure) {
-                      return const Center(child: Text('Something went wrong'));
-                    }
-                    return const HomeLoaderShimmer();
-                  },
+                      return const HomeLoaderShimmer();
+                    },
+                  ),
                 ),
               ),
             ],

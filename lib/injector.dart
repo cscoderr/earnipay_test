@@ -13,14 +13,20 @@ void setupInjectors({required Isar isar}) {
       () => HomeRemoteDataSourceImpl(
             httpClient: http.Client(),
           ));
+
+  getIt
+      .registerLazySingleton<HomeLocalDataSource>(() => HomeLocalDataSourceImpl(
+            cacheService: getIt<CacheService>(),
+            isar: isar,
+          ));
+
   getIt.registerLazySingleton<CacheService>(() => IsarCacheService(
         isar: isar,
       ));
 
   getIt.registerLazySingleton<HomeRepository>(() => HomeRepositoryImpl(
         remoteDataSource: getIt<HomeRemoteDataSource>(),
-        isar: isar,
-        cacheService: getIt<CacheService>(),
+        localDataSource: getIt<HomeLocalDataSource>(),
       ));
 
   getIt.registerLazySingleton<GetPhotoUsecase>(() => GetPhotoUsecase(
