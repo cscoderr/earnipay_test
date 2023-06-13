@@ -14,7 +14,7 @@ class PhotoCubit extends Cubit<PhotoState> {
 
   Future<void> getPhotos({int? page}) async {
     try {
-      final response = await _getPhotoUsecase.call(page: page);
+      final response = await _getPhotoUsecase(page: page);
       final hasReachedMax = response.length < AppConstants.photosLimit;
       final data = <Photo>[...state.photos, ...response];
       emit(

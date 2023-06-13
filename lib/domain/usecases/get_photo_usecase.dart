@@ -5,7 +5,7 @@ class GetPhotoUsecase {
 
   final HomeRepository repository;
 
-  Future<List<Photo>> call({int? limit, int? page}) {
+  Future<List<Photo>> call({int? limit, int? page}) async {
     return repository.getPhotos(
       limit: limit,
       page: page,

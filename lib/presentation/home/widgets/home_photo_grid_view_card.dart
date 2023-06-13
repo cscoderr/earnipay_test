@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:earnipay_test/core/core.dart';
 import 'package:earnipay_test/domain/domain.dart';
 import 'package:earnipay_test/gen/assets.gen.dart';
 import 'package:earnipay_test/presentation/presentation.dart';
@@ -15,8 +16,8 @@ class HomePhotoGridViewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).push(
-        DetailPage.route(photo: photo),
+      onTap: () => context.pushWithAnimation(
+        DetailPage(photo: photo),
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
@@ -34,13 +35,13 @@ class HomePhotoGridViewCard extends StatelessWidget {
               fromHeroContext,
               toHeroContext,
             ) {
-              return SlideTransition(
-                position: animation.drive(
-                  Tween<Offset>(
-                    begin: const Offset(0, 1),
-                    end: const Offset(1, 0),
+              return RotationTransition(
+                turns: animation.drive(
+                  Tween<double>(
+                    begin: 0,
+                    end: 1,
                   ).chain(
-                    CurveTween(curve: Curves.easeInOut),
+                    CurveTween(curve: Curves.elasticOut),
                   ),
                 ),
                 child: toHeroContext.widget,

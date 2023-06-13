@@ -22,8 +22,8 @@ class DetailPhotoWidget extends StatelessWidget {
         fromHeroContext,
         toHeroContext,
       ) {
-        return ScaleTransition(
-          scale: animation.drive(
+        return FadeTransition(
+          opacity: animation.drive(
             Tween<double>(
               begin: 0.5,
               end: 1,
